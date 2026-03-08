@@ -35,7 +35,146 @@ export const productos = [
     "destacado": true,
     "precio": 0
   },
-pintar con lápices de colores, acuarelas y pinceles. Presentación elegante personalizable. Perfecto para regalos creativos y kits infantiles.",
+  {
+    "slug": "botellas-aluminio",
+    "nombre": "Botellas Aluminio",
+    "categoria": "Vasos mugs termos y tazas",
+    "descripcion": "Botella de aluminio con cierre de plástico y carabina metálica. Capacidad 400 ml. Liviana y resistente, ideal para actividades deportivas y regalos corporativos.",
+    "imagen": "",
+    "destacado": false,
+    "precio": 0
+  },
+  {
+    "slug": "mug-termico-half",
+    "nombre": "Mug Térmico Half",
+    "categoria": "Vasos mugs termos y tazas",
+    "descripcion": "Taza de acero inoxidable de 400 ml con cuerpo metalizado de vivos colores y accesorios en negro. Con tapa dosificador de seguridad. Presentada en caja individual.",
+    "imagen": "",
+    "destacado": false,
+    "precio": 0
+  },
+  {
+    "slug": "botella-sport-dosificador",
+    "nombre": "Botella Sport Dosificador",
+    "categoria": "Vasos mugs termos y tazas",
+    "descripcion": "Botella de 500 ml con cuerpo ergonómico en PE color blanco. Tapón a rosca en vivos colores con dosificador de seguridad. Perfecta para deportes y actividades al aire libre.",
+    "imagen": "https://static.wixstatic.com/media/cb4dc8_f0f784960cbe46c5b5c4f7efc893a2e2~mv2.jpg",
+    "destacado": false,
+    "precio": 0
+  },
+  {
+    "slug": "tazones-con-cucharas",
+    "nombre": "Tazones con Cucharas",
+    "categoria": "Vasos mugs termos y tazas",
+    "descripcion": "Variedad de tazones cerámicos con cuchara de color. Presentación en caja de cartón blanco. Ideal para regalos corporativos y kits de desayuno.",
+    "imagen": "",
+    "destacado": false,
+    "precio": 0
+  },
+  {
+    "slug": "vasos-eco-bamboo-variados-modelos",
+    "nombre": "Vasos Eco Bamboo variados modelos",
+    "categoria": "Sustentables",
+    "descripcion": "Vasos ecológicos fabricados con fibra de bambú. Disponibles en varios modelos y colores. Alternativa sustentable para regalos corporativos y eventos.",
+    "imagen": "",
+    "destacado": true,
+    "precio": 0
+  },
+  {
+    "slug": "t679-botella-térmica",
+    "nombre": "T679 Botella Térmica",
+    "categoria": "Vasos mugs termos y tazas",
+    "descripcion": "Botella térmica de acero inoxidable con tapa hermética. Mantiene bebidas a temperatura por horas. Disponible en varios colores con personalización de logo.",
+    "imagen": "",
+    "destacado": false,
+    "precio": 0
+  },
+  {
+    "slug": "taza-asas-color",
+    "nombre": "Taza Asas Color",
+    "categoria": "Vasos mugs termos y tazas",
+    "descripcion": "Taza cerámica con asas de color. Diseño moderno y elegante, disponible en múltiples colores. Ideal para kits de oficina y regalos corporativos personalizados.",
+    "imagen": "",
+    "destacado": false,
+    "precio": 0
+  },
+  {
+    "slug": "parlante-posa-celular",
+    "nombre": "Parlante Posa Celular",
+    "categoria": "Tecnología",
+    "descripcion": "Parlante Bluetooth con funcionalidad de soporte para celular. Botón de encendido/apagado lateral, control de volumen y mini adaptador USB. Pequeñas ventosas para adherirse a distintas superficies.",
+    "imagen": "",
+    "destacado": true,
+    "precio": 0
+  },
+  {
+    "slug": "ec729-power-bank",
+    "nombre": "Power Bank EC729",
+    "categoria": "Tecnología",
+    "descripcion": "Batería externa portátil de alta capacidad. Carga rápida con múltiples puertos USB. Ideal para regalos corporativos tecnológicos y kits ejecutivos.",
+    "imagen": "",
+    "destacado": true,
+    "precio": 0
+  },
+  {
+    "slug": "power-bank-bamboo",
+    "nombre": "Power Bank Bamboo",
+    "categoria": "Sustentables",
+    "descripcion": "Batería externa con carcasa de bambú natural. Capacidad de alta carga con acabado ecológico premium. Perfecta para regalos sustentables y campañas de responsabilidad ambiental.",
+    "imagen": "",
+    "destacado": true,
+    "precio": 0
+  },
+  {
+    "slug": "pendrive-8-gb",
+    "nombre": "Pendrive 8 GB",
+    "categoria": "Tecnología",
+    "descripcion": "Pendrive USB de 8 GB con carcasa personalizable. Compatible con todos los sistemas. Incluye espacio para impresión de logo corporativo.",
+    "imagen": "",
+    "destacado": false,
+    "precio": 0
+  },
+  {
+    "slug": "pajitas-reutilizables",
+    "nombre": "Pajitas Reutilizables",
+    "categoria": "Sustentables",
+    "descripcion": "Set de pajitas reutilizables de acero inoxidable y bambú. Incluye cepillo limpiador. Alternativa ecológica al plástico de un solo uso, ideal para regalos sustentables.",
+    "imagen": "",
+    "destacado": true,
+    "precio": 0
+  },
+  {
+    "slug": "bp192-bolígrafo-de-bambú",
+    "nombre": "Bolígrafo de Bambú BP192",
+    "categoria": "Sustentables",
+    "descripcion": "Bolígrafo elegante fabricado con bambú natural. Escritura suave con tinta azul o negra. Perfecto para regalos corporativos ecológicos y campañas sustentables.",
+    "imagen": "",
+    "destacado": true,
+    "precio": 0
+  },
+  {
+    "slug": "l-piz-met-lico-bicolor",
+    "nombre": "Lápiz Metálico Bicolor",
+    "categoria": "Lápices",
+    "descripcion": "Lápiz metálico bicolor con acabado premium. Disponible en múltiples combinaciones de colores. Ideal para grabar logo o mensaje corporativo.",
+    "imagen": "",
+    "destacado": true,
+    "precio": 0
+  },
+  {
+    "slug": "l-pices-colores-s-lidos",
+    "nombre": "Lápices Colores Sólidos",
+    "categoria": "Lápices",
+    "descripcion": "Set de lápices de colores con minas sólidas de alta pigmentación. Presentados en estuche o caja personalizable. Ideales para regalos infantiles y eventos creativos.",
+    "imagen": "",
+    "destacado": false,
+    "precio": 0
+  },
+  {
+    "slug": "estuche-para-pintar",
+    "nombre": "Estuche para Pintar",
+    "categoria": "Lápices",
+    "descripcion": "Estuche completo para pintar con lápices de colores, acuarelas y pinceles. Presentación elegante personalizable. Perfecto para regalos creativos y kits infantiles.",
     "imagen": "",
     "destacado": false,
     "precio": 0
