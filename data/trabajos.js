@@ -1,6 +1,7 @@
 export const trabajos = [
   {
     "slug": "llaveros-smartycar",
+    "imagen": "/images/trabajos/llaveros-smartycar.jpg",
     "titulo": "Llaveros Smartycar",
     "cliente": "Smartycar",
     "categoria": "Llaveros",
@@ -9,6 +10,7 @@ export const trabajos = [
   },
   {
     "slug": "vasitos-polipapel-nivea",
+    "imagen": "/images/trabajos/vasitos-polipapel-nivea.jpg",
     "titulo": "Vasitos polipapel",
     "cliente": "Nivea",
     "categoria": "Vasos mugs termos y tazas",
@@ -17,6 +19,7 @@ export const trabajos = [
   },
   {
     "slug": "cajas-falabella-low-rise",
+    "imagen": "/images/trabajos/cajas-falabella-low-rise.jpg",
     "titulo": "Cajas Low Rise",
     "cliente": "Falabella",
     "categoria": "Destacados",
@@ -25,6 +28,7 @@ export const trabajos = [
   },
   {
     "slug": "tazas-siemens-healthineers",
+    "imagen": "/images/trabajos/tazas-siemens-healthineers.jpg",
     "titulo": "Tazas corporativas",
     "cliente": "Siemens Healthineers",
     "categoria": "Vasos mugs termos y tazas",
@@ -33,6 +37,7 @@ export const trabajos = [
   },
   {
     "slug": "botellas-lenovo-nutanix",
+    "imagen": "/images/trabajos/botellas-lenovo-nutanix.jpg",
     "titulo": "Botellas térmicas",
     "cliente": "Lenovo y Nutanix",
     "categoria": "Vasos mugs termos y tazas",
@@ -41,6 +46,7 @@ export const trabajos = [
   },
   {
     "slug": "libretas-latam",
+    "imagen": "/images/trabajos/libretas-latam.jpg",
     "titulo": "Libretas LATAM",
     "cliente": "LATAM",
     "categoria": "Libretas",
@@ -49,6 +55,7 @@ export const trabajos = [
   },
   {
     "slug": "mousepad-gamer-intel-lenovo",
+    "imagen": "/images/trabajos/mousepad-gamer-intel-lenovo.jpg",
     "titulo": "Mouse pad gamer",
     "cliente": "Intel / Lenovo",
     "categoria": "Tecnología",
@@ -57,6 +64,7 @@ export const trabajos = [
   },
   {
     "slug": "mugs-stanley-siemens",
+    "imagen": "/images/trabajos/mugs-stanley-siemens.jpg",
     "titulo": "Mugs Stanley",
     "cliente": "Siemens Healthineers",
     "categoria": "Vasos mugs termos y tazas",
@@ -65,6 +73,7 @@ export const trabajos = [
   },
   {
     "slug": "paraguas-latam",
+    "imagen": "/images/trabajos/paraguas-latam.jpg",
     "titulo": "Paraguas LATAM",
     "cliente": "LATAM",
     "categoria": "Invierno",
@@ -73,6 +82,7 @@ export const trabajos = [
   },
   {
     "slug": "bolsas-samsung",
+    "imagen": "/images/trabajos/bolsas-samsung.jpg",
     "titulo": "Bolsas Samsung",
     "cliente": "Samsung",
     "categoria": "Bolsas",
@@ -81,6 +91,7 @@ export const trabajos = [
   },
   {
     "slug": "calcetines-cocacola",
+    "imagen": "/images/trabajos/calcetines-cocacola.jpg",
     "titulo": "Calcetines sublimados",
     "cliente": "Coca-Cola",
     "categoria": "Apparel",
@@ -89,6 +100,7 @@ export const trabajos = [
   },
   {
     "slug": "set-bienvenida-smu",
+    "imagen": "/images/trabajos/set-bienvenida-smu.jpg",
     "titulo": "Set de bienvenida",
     "cliente": "SMU",
     "categoria": "Oficina y negocios",
