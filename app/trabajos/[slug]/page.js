@@ -41,7 +41,18 @@ export default function TrabajoDetallePage({ params }) {
         </div>
 
         <div className="mt-10">
-          <CaseStudyGallery />
+          {trabajo.imagen ? (
+            <div className="overflow-hidden rounded-3xl shadow-md">
+              <img
+                src={trabajo.imagen}
+                alt={trabajo.titulo}
+                className="w-full object-cover"
+                style={{ maxHeight: '560px' }}
+              />
+            </div>
+          ) : (
+            <CaseStudyGallery />
+          )}
         </div>
 
         <div className="mt-10 flex gap-4">
