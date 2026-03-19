@@ -6,8 +6,13 @@ export function generateStaticParams() {
   return productos.map((producto) => ({ slug: producto.slug }));
 }
 
+function findProducto(slug) {
+  const normalized = decodeURIComponent(slug).normalize("NFC");
+  return productos.find((item) => item.slug.normalize("NFC") === normalized);
+}
+
 export function generateMetadata({ params }) {
-  const producto = productos.find((item) => item.slug === params.slug);
+  const producto = findProducto(params.slug);
   return {
     title: producto ? `${producto.nombre} | EcoGift Chile` : "Producto | EcoGift Chile",
     description: producto?.descripcion || "Producto promocional EcoGift"
@@ -15,7 +20,7 @@ export function generateMetadata({ params }) {
 }
 
 export default function ProductoDetallePage({ params }) {
-  const producto = productos.find((item) => item.slug === params.slug);
+  const producto = findProducto(params.slug);
 
   if (!producto) {
     return <main className="p-10">Producto no encontrado.</main>;
@@ -24,10 +29,21 @@ export default function ProductoDetallePage({ params }) {
   return (
     <main className="py-16">
       <Container className="grid gap-10 lg:grid-cols-[1fr_420px]">
-        <div className="rounded-3xl border border-slate-200 bg-slate-100 p-12 shadow-sm">
-          <div className="flex h-80 items-center justify-center rounded-2xl border border-dashed border-slate-300 text-slate-500">
-            Imagen / mockup del producto
-          </div>
+        <div className="rounded-3xl border border-slate-200 bg-slate-100 p-4 shadow-sm flex items-center justify-center min-h-80">
+          {producto.imagen ? (
+            <img
+              src={producto.imagen}
+              alt={producto.nombre}
+              className="max-h-80 w-full object-contain rounded-2xl"
+            />
+          ) : (
+            <div className="flex h-80 w-full flex-col items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white gap-3 text-slate-400">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span className="text-sm font-medium">{producto.nombre}</span>
+            </div>
+          )}
         </div>
         <div>
           <span className="tag">{producto.categoria}</span>
