@@ -5,9 +5,9 @@ import ProductCard from "./ProductCard";
 import { searchItems } from "../lib/search";
 import { filterByCategory } from "../lib/filters";
 
-export default function ProductCatalog({ productos, categorias }) {
+export default function ProductCatalog({ productos, categorias, initialCategoria = "Todos" }) {
   const [busqueda, setBusqueda] = useState("");
-  const [categoria, setCategoria] = useState("Todos");
+  const [categoria, setCategoria] = useState(initialCategoria);
 
   const filtrados = useMemo(() => {
     const byCategory = filterByCategory(productos, categoria);
