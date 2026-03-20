@@ -4,11 +4,11 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          50: "#f0fdfa",
-          100: "#ccfbf1",
-          600: "#0d9488",
-          700: "#0f766e",
-          800: "#115e59"
+          50: "#f2f9e8",
+          100: "#daf0b0",
+          600: "#6ba336",
+          700: "#5B8F2E",
+          800: "#4a7325"
         },
         arena: "#f7f3ec"
       },
