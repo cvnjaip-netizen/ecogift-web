@@ -21,7 +21,7 @@ export default function Navbar() {
             </a>
           ))}
         </nav>
-        <a href="/cotizar" className="btn-primary text-sm">Solicitar cotizaciÃ³n</a>
+        <a href="/cotizar" className="btn-primary text-sm">Solicitar cotización</a>
       </Container>
     </header>
   );
