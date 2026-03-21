@@ -18,20 +18,18 @@ function initials(name) {
 }
 
 function LogoWithFallback({ cliente }) {
-  const [stage, setStage] = useState(0);
+  const [failed, setFailed] = useState(false);
   const imgRef = useRef(null);
 
-  const advance = () => setStage((s) => s + 1);
-
-  // After hydration, check if the image already failed before onError could attach
+  // Catch images that failed before React's onError could attach (SSR hydration timing)
   useEffect(() => {
     const img = imgRef.current;
     if (img && img.complete && img.naturalWidth === 0) {
-      advance();
+      setFailed(true);
     }
-  }, [stage]);
+  }, []);
 
-  if (stage >= 2) {
+  if (failed) {
     return (
       <div
         style={{ backgroundColor: hashColor(cliente.nombre) }}
@@ -42,21 +40,13 @@ function LogoWithFallback({ cliente }) {
     );
   }
 
-  // stage 0: Clearbit — high-quality logos for major international brands
-  // stage 1: icon.horse — fetches real favicon from the company's own website
-  const src =
-    stage === 0
-      ? `https://logo.clearbit.com/${cliente.dominio}`
-      : `https://icon.horse/icon/${cliente.dominio}`;
-
   return (
     <img
       ref={imgRef}
-      key={stage}
-      src={src}
+      src={`https://icon.horse/icon/${cliente.dominio}`}
       alt={cliente.nombre}
       className="h-14 w-14 object-contain"
-      onError={advance}
+      onError={() => setFailed(true)}
     />
   );
 }
