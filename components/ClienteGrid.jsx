@@ -1,72 +1,23 @@
-"use client";
-import { useState, useEffect, useRef } from "react";
+import Image from 'next/image';
+import { clientes } from '../data/clientes';
 
-const BRAND_COLORS = [
-  "#16a34a","#2563eb","#9333ea","#dc2626","#d97706",
-  "#0891b2","#7c3aed","#db2777","#059669","#b45309"
-];
-
-function hashColor(name) {
-  let h = 0;
-  for (let i = 0; i < name.length; i++) h = name.charCodeAt(i) + ((h << 5) - h);
-  return BRAND_COLORS[Math.abs(h) % BRAND_COLORS.length];
-}
-
-function initials(name) {
-  const words = name.trim().split(/\s+/);
-  return words.length >= 2 ? (words[0][0] + words[1][0]).toUpperCase() : name.slice(0, 2).toUpperCase();
-}
-
-function LogoWithFallback({ cliente }) {
-  const [failed, setFailed] = useState(false);
-  const imgRef = useRef(null);
-
-  // Catch images that failed before React's onError could attach (SSR hydration timing)
-  useEffect(() => {
-    const img = imgRef.current;
-    if (img && img.complete && img.naturalWidth === 0) {
-      setFailed(true);
-    }
-  }, []);
-
-  if (failed) {
-    return (
-      <div
-        style={{ backgroundColor: hashColor(cliente.nombre) }}
-        className="flex h-14 w-14 items-center justify-center rounded-xl text-white font-bold text-xl leading-none"
-      >
-        {initials(cliente.nombre)}
-      </div>
-    );
-  }
-
-  const src = cliente.logoPath
-    ? `/images/clientes/${cliente.logoPath}`
-    : `https://icon.horse/icon/${cliente.dominio}`;
+export default function ClienteGrid() {
+  const withLogos = clientes.filter(c => c.logoPath);
 
   return (
-    <img
-      ref={imgRef}
-      src={src}
-      alt={cliente.nombre}
-      className="h-14 w-14 object-contain"
-      onError={() => setFailed(true)}
-    />
-  );
-}
-
-export default function ClienteGrid({ clientes }) {
-  return (
-    <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 lg:grid-cols-6">
-      {clientes.map((cliente) => (
+    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 px-4">
+      {withLogos.map((cliente) => (
         <div
-          key={cliente.nombre}
-          className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white px-3 py-5 shadow-sm"
+          key={cliente.dominio}
+          className="flex items-center justify-center bg-white rounded-lg p-4 shadow-sm border border-gray-100"
+          style={{ height: '80px' }}
         >
-          <LogoWithFallback cliente={cliente} />
-          <span className="text-center text-xs font-medium text-slate-700 leading-tight">
-            {cliente.nombre}
-          </span>
+          <img
+            src={'/images/clientes/' + cliente.logoPath}
+            alt={cliente.nombre}
+            title={cliente.nombre}
+            style={{ maxHeight: '52px', maxWidth: '100%', objectFit: 'contain' }}
+          />
         </div>
       ))}
     </div>
