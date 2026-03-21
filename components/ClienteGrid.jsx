@@ -40,10 +40,14 @@ function LogoWithFallback({ cliente }) {
     );
   }
 
+  const src = cliente.logoPath
+    ? `/images/clientes/${cliente.logoPath}`
+    : `https://icon.horse/icon/${cliente.dominio}`;
+
   return (
     <img
       ref={imgRef}
-      src={`https://icon.horse/icon/${cliente.dominio}`}
+      src={src}
       alt={cliente.nombre}
       className="h-14 w-14 object-contain"
       onError={() => setFailed(true)}
