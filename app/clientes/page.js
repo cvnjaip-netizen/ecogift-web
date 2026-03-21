@@ -5,7 +5,7 @@ import { clientes } from "../../data/clientes";
 
 export const metadata = {
   title: "Clientes | EcoGift Chile",
-  description: "Base de clientes visibles del sitio actual de EcoGift."
+  description: "Empresas y organizaciones que han confiado en EcoGift para sus regalos corporativos."
 };
 
 export default function ClientesPage() {
@@ -14,8 +14,8 @@ export default function ClientesPage() {
       <Container>
         <SectionTitle
           eyebrow="Clientes"
-          title="Marcas visibles en el sitio actual"
-          text="Se cargó una selección de clientes visibles del sitio público para reforzar confianza y validación."
+          title="Marcas con quienes hemos trabajado"
+          text="Empresas y organizaciones que han confiado en EcoGift para sus regalos corporativos."
         />
         <div className="mt-10">
           <ClienteGrid clientes={clientes} />
