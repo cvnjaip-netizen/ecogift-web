@@ -7,7 +7,7 @@ import { categorias } from "../../data/categorias";
 
 export const metadata = {
   title: "Productos promocionales | EcoGift Chile",
-  description: "Catálogo de productos promocionales y regalos corporativos organizados por categoría."
+  description: "Catálogo de productos promocionales y regalos corporativos organizados por categoría.",
 };
 
 export default function ProductosPage({ searchParams }) {
@@ -21,7 +21,7 @@ export default function ProductosPage({ searchParams }) {
           text="Catálogo completo con búsqueda y filtrado por categoría."
         />
         <div className="mt-10">
-          <ProductCatalog productos={productos} categorias={categorias} initialCategoria={initialCategoria} />
+          <ProductCatalog key={initialCategoria} productos={productos} categorias={categorias} initialCategoria={initialCategoria} />
         </div>
         <div className="mt-16">
           <FAQ />
