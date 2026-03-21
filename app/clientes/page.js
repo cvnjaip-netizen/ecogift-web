@@ -13,7 +13,6 @@ export default function ClientesPage() {
     <main className="py-16">
       <Container>
         <SectionTitle
-          eyebrow="Clientes"
           title="Clientes"
           text="Empresas y organizaciones que han confiado en EcoGift para sus regalos corporativos."
         />
