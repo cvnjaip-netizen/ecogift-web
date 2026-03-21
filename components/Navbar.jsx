@@ -11,16 +11,14 @@ const links = [
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-slate-200 bg-white">
       <Container className="flex items-center justify-between py-3">
         <a href="/" className="flex items-center">
-          <div className="bg-white rounded">
-            <img
-              src="/images/ecogift-logo.png"
-              alt="EcoGift"
-              className="h-14 w-auto object-contain"
-            />
-          </div>
+          <img
+            src="/images/ecogift-logo.png"
+            alt="EcoGift"
+            className="h-14 w-auto object-contain"
+          />
         </a>
         <nav className="hidden gap-6 text-sm font-medium md:flex">
           {links.map((link) => (
