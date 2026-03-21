@@ -20,7 +20,7 @@ export default function HomePage() {
         <Container>
           <SectionTitle
             eyebrow="Clientes"
-            title="Marcas con quienes hemos trabajado"
+            title="Clientes"
             text="Empresas y organizaciones que han confiado en EcoGift para sus regalos corporativos."
           />
           <div className="mt-10">
