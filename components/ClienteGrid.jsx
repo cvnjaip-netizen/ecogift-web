@@ -18,8 +18,9 @@ function initials(name) {
 }
 
 function LogoWithFallback({ cliente }) {
-  const [failed, setFailed] = useState(false);
-  if (failed) {
+  const [stage, setStage] = useState(0);
+
+  if (stage >= 2) {
     return (
       <div
         style={{ backgroundColor: hashColor(cliente.nombre) }}
@@ -29,12 +30,19 @@ function LogoWithFallback({ cliente }) {
       </div>
     );
   }
+
+  const src =
+    stage === 0
+      ? `https://logo.clearbit.com/${cliente.dominio}`
+      : `https://www.google.com/s2/favicons?domain=${cliente.dominio}&sz=128`;
+
   return (
     <img
-      src={`https://www.google.com/s2/favicons?domain=${cliente.dominio}&sz=128`}
+      key={stage}
+      src={src}
       alt={cliente.nombre}
       className="h-14 w-14 object-contain"
-      onError={() => setFailed(true)}
+      onError={() => setStage((s) => s + 1)}
     />
   );
 }
