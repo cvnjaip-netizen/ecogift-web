@@ -16,6 +16,19 @@ export default function HomePage() {
     <main>
       <Hero />
 
+<section className="py-20">
+        <Container>
+          <SectionTitle
+            eyebrow="Clientes"
+            title="Marcas con quienes hemos trabajado"
+            text="Empresas y organizaciones que han confiado en EcoGift para sus regalos corporativos."
+          />
+          <div className="mt-10">
+            <ClienteGrid clientes={clientes} />
+          </div>
+        </Container>
+      </section>
+
       <section className="py-20">
         <Container>
           <SectionTitle
@@ -87,18 +100,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="py-20">
-        <Container>
-          <SectionTitle
-            eyebrow="Clientes"
-            title="Marcas visibles en el sitio público"
-            text="El sitio actual exhibe una base amplia de clientes y marcas reconocibles."
-          />
-          <div className="mt-10">
-            <ClienteGrid clientes={clientes.slice(0, 24)} />
-          </div>
-        </Container>
-      </section>
+      
 
       <CTASection />
     </main>
