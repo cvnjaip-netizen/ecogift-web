@@ -31,10 +31,12 @@ function LogoWithFallback({ cliente }) {
     );
   }
 
+  // stage 0: Clearbit — high-quality logos for major brands
+  // stage 1: icon.horse — fetches real favicon from company website, never returns a silent globe
   const src =
     stage === 0
       ? `https://logo.clearbit.com/${cliente.dominio}`
-      : `https://www.google.com/s2/favicons?domain=${cliente.dominio}&sz=128`;
+      : `https://icon.horse/icon/${cliente.dominio}`;
 
   return (
     <img
