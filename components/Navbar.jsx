@@ -17,7 +17,7 @@ export default function Navbar() {
           <img
             src="/images/ecogift-logo.png"
             alt="EcoGift"
-            className="h-14 w-auto object-contain"
+            className="h-14 w-auto object-contain bg-white"
           />
         </a>
         <nav className="hidden gap-6 text-sm font-medium md:flex">
