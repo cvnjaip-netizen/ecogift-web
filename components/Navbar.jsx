@@ -6,7 +6,7 @@ const links = [
   { href: "/trabajos", label: "Trabajos" },
   { href: "/soluciones", label: "Soluciones" },
   { href: "/clientes", label: "Clientes" },
-  { href: "/cotizar", label: "Cotizar" }
+  { href: "/cotizar", label: "Cotizar" },
 ];
 
 export default function Navbar() {
@@ -14,17 +14,10 @@ export default function Navbar() {
     <header className="sticky top-0 z-30 border-b border-slate-200 bg-white">
       <Container className="flex items-center justify-between py-3">
         <a href="/" className="flex-shrink-0">
-          <div
-            style={{
-              width: '235px',
-              height: '56px',
-              backgroundImage: 'url(/images/ecogift-logo-v2.png)',
-              backgroundSize: '300px auto',
-              backgroundPosition: '-30px -72px',
-              backgroundRepeat: 'no-repeat'
-            }}
-            role="img"
-            aria-label="EcoGift"
+          <img
+            src="/images/ecogift-logo-v2.png"
+            alt="EcoGift"
+            style={{ height: '44px', width: 'auto' }}
           />
         </a>
         <nav className="hidden gap-6 text-sm font-medium md:flex">
