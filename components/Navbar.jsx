@@ -13,27 +13,18 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200 bg-white">
       <Container className="flex items-center justify-between py-3">
-        <a
-          href="/"
-          style={{
-            display: 'block',
-            width: '175px',
-            height: '56px',
-            overflow: 'hidden',
-            position: 'relative',
-            flexShrink: 0
-          }}
-        >
-          <img
-            src="/images/ecogift-logo-v2.png"
-            alt="EcoGift"
+        <a href="/" className="flex-shrink-0">
+          <div
             style={{
-              position: 'absolute',
-              height: '240px',
-              width: 'auto',
-              top: '-85px',
-              left: '-85px'
+              width: '200px',
+              height: '56px',
+              backgroundImage: 'url(/images/ecogift-logo-v2.png)',
+              backgroundSize: '300px auto',
+              backgroundPosition: '-47px -72px',
+              backgroundRepeat: 'no-repeat'
             }}
+            role="img"
+            aria-label="EcoGift"
           />
         </a>
         <nav className="hidden gap-6 text-sm font-medium md:flex">
