@@ -15,7 +15,7 @@ export default function Navbar() {
       <Container className="flex items-center justify-between py-3">
         <a href="/" className="flex items-center">
           <img
-            src="/images/ecogift-logo.png"
+            src="/images/ecogift-logo-v2.png"
             alt="EcoGift"
             className="h-14 w-auto object-contain bg-white"
           />
