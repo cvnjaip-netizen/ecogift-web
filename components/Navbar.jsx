@@ -15,7 +15,7 @@ export default function Navbar() {
       <Container className="flex items-center justify-between py-3">
         <a href="/" className="flex-shrink-0">
           <img
-            src="/images/ecogift-logo-v2.png"
+            src="/images/ecogift-logo-v3.png"
             alt="EcoGift"
             style={{ height: '44px', width: 'auto' }}
           />
