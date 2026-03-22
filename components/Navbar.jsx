@@ -13,11 +13,11 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200 bg-white">
       <Container className="flex items-center justify-between py-3">
-        <a href="/" className="flex items-center">
+        <a href="/" className="flex items-center overflow-hidden" style={{height:'56px', width:'200px'}}>
           <img
             src="/images/ecogift-logo-v2.png"
             alt="EcoGift"
-            className="h-14 w-auto object-contain bg-white"
+            style={{height:'160px', width:'auto', marginTop:'-50px', marginBottom:'-54px', objectFit:'contain'}}
           />
         </a>
         <nav className="hidden gap-6 text-sm font-medium md:flex">
