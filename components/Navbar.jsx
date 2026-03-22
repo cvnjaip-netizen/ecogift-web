@@ -17,7 +17,7 @@ export default function Navbar() {
           href="/"
           style={{
             display: 'block',
-            width: '265px',
+            width: '175px',
             height: '56px',
             overflow: 'hidden',
             position: 'relative',
@@ -31,8 +31,8 @@ export default function Navbar() {
               position: 'absolute',
               height: '240px',
               width: 'auto',
-              top: '-77px',
-              left: '-45px'
+              top: '-92px',
+              left: '-92px'
             }}
           />
         </a>
