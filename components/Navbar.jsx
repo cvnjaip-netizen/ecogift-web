@@ -16,11 +16,11 @@ export default function Navbar() {
         <a href="/" className="flex-shrink-0">
           <div
             style={{
-              width: '200px',
+              width: '235px',
               height: '56px',
               backgroundImage: 'url(/images/ecogift-logo-v2.png)',
               backgroundSize: '300px auto',
-              backgroundPosition: '-47px -72px',
+              backgroundPosition: '-30px -72px',
               backgroundRepeat: 'no-repeat'
             }}
             role="img"
