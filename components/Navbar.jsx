@@ -15,9 +15,9 @@ export default function Navbar() {
       <Container className="flex items-center justify-between py-3">
         <a href="/" className="flex-shrink-0">
           <img
-            src="/images/ecogift-logo-v3.png"
+            src="/images/ecogift_fixed_highres.png"
             alt="EcoGift"
-            style={{ height: '44px', width: 'auto' }}
+            style={{ maxHeight: '44px', maxWidth: '100%', objectFit: 'contain' }}
           />
         </a>
         <nav className="hidden gap-6 text-sm font-medium md:flex">
