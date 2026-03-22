@@ -19,7 +19,6 @@ export default function HomePage() {
 <section className="py-20">
         <Container>
           <SectionTitle
-            eyebrow="Clientes"
             title="Clientes"
             text="Empresas y organizaciones que han confiado en EcoGift para sus regalos corporativos."
           />
@@ -32,15 +31,14 @@ export default function HomePage() {
       <section className="py-20">
         <Container>
           <SectionTitle
-            eyebrow="Categorías visibles del sitio"
-            title="Explora el catálogo por categoría"
-            text="La estructura se construyó con las categorías públicas visibles del sitio actual."
+            title="Explora el catÃ¡logo por categorÃ­a"
+            text="La estructura se construyÃ³ con las categorÃ­as pÃºblicas visibles del sitio actual."
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {categorias.slice(0, 12).map((nombre) => <CategoryCard key={nombre} nombre={nombre} />)}
           </div>
           <div className="mt-8">
-            <a href="/productos" className="btn-secondary">Ver todo el catálogo</a>
+            <a href="/productos" className="btn-secondary">Ver todo el catÃ¡logo</a>
           </div>
         </Container>
       </section>
@@ -50,7 +48,7 @@ export default function HomePage() {
           <SectionTitle
             eyebrow="Productos destacados"
             title="Productos promocionales listos para cotizar"
-            text="Catálogo inicial cargado con productos visibles y representativos del sitio público."
+            text="CatÃ¡logo inicial cargado con productos visibles y representativos del sitio pÃºblico."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {productos.filter((p) => p.destacado).slice(0, 8).map((producto) => (
@@ -65,7 +63,7 @@ export default function HomePage() {
           <SectionTitle
             eyebrow="Trabajos reales"
             title="Casos y proyectos visibles de EcoGift"
-            text="Casos creados a partir del feed público de trabajos y piezas promocionales visibles en el sitio."
+            text="Casos creados a partir del feed pÃºblico de trabajos y piezas promocionales visibles en el sitio."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {trabajos.slice(0, 6).map((trabajo) => (
@@ -82,14 +80,14 @@ export default function HomePage() {
         <Container>
           <SectionTitle
             eyebrow="Soluciones"
-            title="Pensado para campañas, eventos y kits"
-            text="La navegación prioriza necesidades de negocio antes que el catálogo puro."
+            title="Pensado para campaÃ±as, eventos y kits"
+            text="La navegaciÃ³n prioriza necesidades de negocio antes que el catÃ¡logo puro."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
               ["Regalos para eventos", "Merchandising y regalos promocionales para ferias, lanzamientos y activaciones."],
               ["Kits de bienvenida", "Sets corporativos para nuevos ingresos, equipos internos y employer branding."],
-              ["Regalos corporativos", "Productos funcionales o premium para clientes, equipos y campañas de relacionamiento."]
+              ["Regalos corporativos", "Productos funcionales o premium para clientes, equipos y campaÃ±as de relacionamiento."]
             ].map(([titulo, texto]) => (
               <div key={titulo} className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
                 <h3 className="text-xl font-semibold">{titulo}</h3>
