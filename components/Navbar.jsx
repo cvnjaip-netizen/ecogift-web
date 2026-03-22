@@ -15,7 +15,7 @@ export default function Navbar() {
           <img
             src="/images/ecogift-logo-navbar.jpg"
             alt="EcoGift"
-            style={{ maxHeight: '72px', maxWidth: '100%', objectFit: 'contain' }}
+            style={{ maxHeight: '120px', maxWidth: '100%', objectFit: 'contain' }}
           />
         </a>
         <nav className="hidden md:flex gap-6">
