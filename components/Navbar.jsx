@@ -17,7 +17,7 @@ export default function Navbar() {
           href="/"
           style={{
             display: 'block',
-            width: '210px',
+            width: '265px',
             height: '56px',
             overflow: 'hidden',
             position: 'relative',
@@ -29,10 +29,10 @@ export default function Navbar() {
             alt="EcoGift"
             style={{
               position: 'absolute',
-              height: '280px',
+              height: '240px',
               width: 'auto',
-              top: '-112px',
-              left: '-90px'
+              top: '-77px',
+              left: '-45px'
             }}
           />
         </a>
