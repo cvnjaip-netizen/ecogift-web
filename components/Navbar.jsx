@@ -13,7 +13,7 @@ export default function Navbar() {
       <Container className="flex items-center justify-between py-3">
         <a href="/" className="flex-shrink-0">
           <img
-            src="/images/ecogift-logo-navbar.jpg"
+            src="/images/ecogift-logo-navbar.png"
             alt="EcoGift"
             style={{ maxHeight: '120px', maxWidth: '100%', objectFit: 'contain' }}
           />
