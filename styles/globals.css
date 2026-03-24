@@ -29,33 +29,36 @@ a {
 
 /* ── Buttons ── */
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-full
-    bg-eco-green px-6 py-3 font-bold text-white
+  @apply inline-flex items-center justify-center rounded-full bg-eco-green
+    px-6 py-3 font-bold text-white
     shadow-[0_18px_30px_rgba(24,79,54,0.24)]
     hover:-translate-y-0.5 hover:bg-eco-green3 transition-all;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center rounded-full
-    border border-slate-200 bg-white px-6 py-3 font-bold text-eco-ink
+  @apply inline-flex items-center justify-center rounded-full border
+    border-slate-200 bg-white px-6 py-3 font-bold text-eco-ink
     hover:-translate-y-0.5 hover:shadow-eco-sm transition-all;
 }
 
 .btn-lime {
-  @apply inline-flex items-center justify-center rounded-full
-    bg-eco-lime px-6 py-3 font-extrabold text-[#14200f]
-    shadow-lime hover:-translate-y-0.5 transition-all;
+  @apply inline-flex items-center justify-center rounded-full bg-eco-lime
+    px-6 py-3 font-extrabold text-[#14200f] shadow-lime
+    hover:-translate-y-0.5 transition-all;
 }
 
 /* ── Tags ── */
 .tag {
-  @apply inline-flex rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand-800;
+  @apply inline-flex rounded-full bg-brand-50 px-3 py-1 text-xs font-medium
+    text-brand-800;
 }
 
 /* ── Eyebrow label ── */
 .eco-eyebrow {
-  @apply inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-extrabold
-    bg-white/10 border border-white/12 text-white/90;
+  @apply inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-extrabold;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.90);
 }
 
 /* ── Section label ── */
@@ -66,9 +69,13 @@ a {
 /* ── Hero card ── */
 .hero-card {
   @apply relative rounded-5xl overflow-hidden text-white shadow-eco-lg;
-  background: linear-gradient(135deg, rgba(16,53,36,0.98) 0%, rgba(25,79,54,0.96) 55%, rgba(35,104,74,0.94) 100%);
+  background: linear-gradient(135deg,
+    rgba(16,53,36,0.98) 0%,
+    rgba(25,79,54,0.96) 55%,
+    rgba(35,104,74,0.94) 100%);
   border: 1px solid rgba(255,255,255,0.08);
 }
+
 .hero-card::before {
   content: "";
   @apply absolute inset-0 pointer-events-none;
@@ -79,7 +86,8 @@ a {
 
 /* ── Stat pill inside hero ── */
 .eco-stat {
-  @apply p-4 rounded-[20px] border border-white/10;
+  @apply p-4 rounded-[20px];
+  border: 1px solid rgba(255,255,255,0.10);
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
 }
@@ -104,16 +112,19 @@ a {
     hover:-translate-y-1 hover:shadow-eco-lg transition-all;
   background: linear-gradient(180deg, #fff 0%, #f8fbf5 100%);
 }
+
 .eco-feature-card.heroish {
   @apply text-white;
   background: linear-gradient(135deg, #173f2e 0%, #296e4d 100%);
   border-color: rgba(255,255,255,0.08);
 }
+
 .eco-feature-card.heroish::after {
   content: "";
   @apply absolute w-44 h-44 rounded-full pointer-events-none;
   background: rgba(215,255,77,0.20);
-  right: -30px; bottom: -30px;
+  right: -30px;
+  bottom: -30px;
 }
 
 /* ── Showcase card ── */
@@ -125,12 +136,15 @@ a {
 
 /* ── Showcase visual area ── */
 .eco-visual-green {
-  background: linear-gradient(135deg, rgba(215,255,77,0.32), rgba(255,255,255,0.2)),
-              linear-gradient(180deg, #214d38, #2f7652);
+  background:
+    linear-gradient(135deg, rgba(215,255,77,0.32), rgba(255,255,255,0.2)),
+    linear-gradient(180deg, #214d38, #2f7652);
 }
+
 .eco-visual-sand {
-  background: linear-gradient(135deg, rgba(255,140,66,0.20), rgba(255,255,255,0.1)),
-              linear-gradient(180deg, #f3e6d3, #eadbc0);
+  background:
+    linear-gradient(135deg, rgba(255,140,66,0.20), rgba(255,255,255,0.1)),
+    linear-gradient(180deg, #f3e6d3, #eadbc0);
 }
 
 /* ── Strategy card ── */
@@ -141,24 +155,34 @@ a {
 
 /* ── Contact card ── */
 .eco-contact-card {
-  @apply relative rounded-4xl text-white overflow-hidden shadow-eco-lg p-8 md:p-12 lg:p-16;
+  @apply relative rounded-4xl text-white overflow-hidden shadow-eco-lg
+    p-8 md:p-12 lg:p-16;
   background: linear-gradient(135deg, #173f2e 0%, #225f44 100%);
 }
+
 .eco-contact-card::after {
   content: "";
   @apply absolute w-56 h-56 rounded-full pointer-events-none;
   background: rgba(215,255,77,0.18);
-  right: -40px; top: -30px;
+  right: -40px;
+  top: -30px;
 }
 
 /* ── Dark-bg form fields ── */
 .eco-field {
-  @apply w-full rounded-2xl px-4 py-3.5 text-sm text-white outline-none transition-colors;
+  @apply w-full rounded-2xl px-4 py-3.5 text-sm text-white outline-none
+    transition-colors;
   border: 1px solid rgba(255,255,255,0.12);
   background: rgba(255,255,255,0.10);
 }
-.eco-field::placeholder { color: rgba(255,255,255,0.60); }
-.eco-field:focus { border-color: #d7ff4d; }
+
+.eco-field::placeholder {
+  color: rgba(255,255,255,0.60);
+}
+
+.eco-field:focus {
+  border-color: #d7ff4d;
+}
 
 /* ── Sticky CTA ── */
 .eco-sticky-cta {
@@ -180,6 +204,7 @@ a {
   background: rgba(255,255,255,0.82);
   box-shadow: 0 10px 24px rgba(16,32,24,0.05);
 }
+
 .eco-menu-pill a {
   @apply text-sm font-bold text-slate-600 hover:text-eco-green transition-colors;
 }
@@ -195,4 +220,4 @@ a {
 .eco-bullet-icon {
   @apply inline-flex items-center justify-center w-6 h-6 rounded-full
     bg-brand-50 text-eco-green text-xs font-black flex-shrink-0;
-}
+  }
