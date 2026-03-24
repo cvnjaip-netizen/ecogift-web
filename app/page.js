@@ -1,105 +1,147 @@
-import Container from "../components/Container";
-import Hero from "../components/Hero";
-import SectionTitle from "../components/SectionTitle";
-import CategoryCard from "../components/CategoryCard";
-import ProductCard from "../components/ProductCard";
-import TrabajoCard from "../components/TrabajoCard";
-import ClienteGrid from "../components/ClienteGrid";
-import CTASection from "../components/CTASection";
-import { categorias } from "../data/categorias";
-import { productos } from "../data/productos";
-import { trabajos } from "../data/trabajos";
-import { clientes } from "../data/clientes";
+import Container from '../components/Container';
+import Hero from '../components/Hero';
+import SectionTitle from '../components/SectionTitle';
+import CategoryCard from '../components/CategoryCard';
+import ProductCard from '../components/ProductCard';
+import TrabajoCard from '../components/TrabajoCard';
+import ClienteGrid from '../components/ClienteGrid';
+import CTASection from '../components/CTASection';
+import StickyCTA from '../components/StickyCTA';
+import { categorias } from '../data/categorias';
+import { productos } from '../data/productos';
+import { trabajos } from '../data/trabajos';
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <main>
+    <>
+      {/* Hero Section */}
       <Hero />
 
-<section className="py-20">
-  <Container>
-    <SectionTitle
-      title="Clientes"
-      text="Empresas y organizaciones que han confiado en EcoGift para sus regalos corporativos."
-    />
-    <div className="mt-10">
-      <ClienteGrid clientes={clientes} />
-    </div>
-  </Container>
-</section>
+      {/* Clients Section */}
+      <section className="py-12 px-4">
+        <ClienteGrid />
+      </section>
 
-  <section className="py-20">
-    <Container>
-      <SectionTitle
-        title="Explora el catálogo por categoría"
-        text="La estructura se construyó con las categorías públicas visibles del sitio actual."
-      />
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {categorias.slice(0, 12).map((nombre) => <CategoryCard key={nombre} nombre={nombre} />)}
-      </div>
-      <div className="mt-8">
-        <a href="/productos" className="btn-secondary">Ver todo el catálogo</a>
-      </div>
-    </Container>
-  </section>
+      {/* Categories Section */}
+      <section className="py-16">
+        <Container>
+          <SectionTitle
+            title="Explora el catálogo por categoría"
+            text="La estructura se construyó con las categorías públicas visibles del sitio actual."
+          />
 
-  <section className="bg-slate-50 py-20">
-    <Container>
-      <SectionTitle
-        title="Productos Destacados"
-        text="Catálogo inicial cargado con productos visibles y representativos del sitio público."
-      />
-      <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        {productos.filter((p) => p.destacado).slice(0, 8).map((producto) => (
-          <ProductCard key={producto.slug} producto={producto} />
-        ))}
-      </div>
-    </Container>
-  </section>
-
-  <section className="py-20">
-    <Container>
-      <SectionTitle
-        eyebrow="Trabajos reales"
-        title="Casos y proyectos visibles de EcoGift"
-        text="Casos creados a partir del feed público de trabajos y piezas promocionales visibles en el sitio."
-      />
-      <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {trabajos.slice(0, 6).map((trabajo) => (
-          <TrabajoCard key={trabajo.slug} trabajo={trabajo} />
-        ))}
-      </div>
-      <div className="mt-8">
-        <a href="/trabajos" className="btn-secondary">Ver todos los trabajos</a>
-      </div>
-    </Container>
-  </section>
-
-  <section className="bg-arena py-20">
-    <Container>
-      <SectionTitle
-        eyebrow="Soluciones"
-        title="Pensado para campañas, eventos y kits"
-        text="La navegación prioriza necesidades de negocio antes que el catálogo puro."
-      />
-      <div className="mt-10 grid gap-6 md:grid-cols-3">
-        {[
-          ["Regalos para eventos", "Merchandising y regalos promocionales para ferias, lanzamientos y activaciones."],
-          ["Kits de bienvenida", "Sets corporativos para nuevos ingresos, equipos internos y employer branding."],
-          ["Regalos corporativos", "Productos funcionales o premium para clientes, equipos y campañas de relacionamiento."]
-        ].map(([titulo, texto]) => (
-          <div key={titulo} className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-            <h3 className="text-xl font-semibold">{titulo}</h3>
-            <p className="mt-3 text-sm leading-6 text-slate-600">{texto}</p>
+          {/* Featured Categories Grid */}
+          <div className="grid md:grid-cols-[1.1fr_0.9fr_0.9fr] gap-4 mb-4">
+            {categorias.slice(0, 3).map((cat, index) => (
+              <CategoryCard key={index} nombre={cat.nombre} index={index} />
+            ))}
           </div>
-        ))}
-      </div>
-    </Container>
-  </section>
 
-  
+          {/* Showcase Categories Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            {categorias.slice(3, 12).map((cat, index) => (
+              <CategoryCard key={index + 3} nombre={cat.nombre} index={index + 3} />
+            ))}
+          </div>
 
-  <CTASection />
-    </main>
+          <div className="text-center">
+            <a href="/productos" className="btn-secondary">
+              Ver todo el catálogo
+            </a>
+          </div>
+        </Container>
+      </section>
+
+      {/* Products Section */}
+      <section className="bg-eco-paper/50 py-16">
+        <Container>
+          <SectionTitle
+            title="Productos Destacados"
+            text="Catálogo inicial cargado con productos visibles y representativos del sitio público."
+          />
+
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {productos
+              .filter((p) => p.destacado)
+              .slice(0, 8)
+              .map((producto, index) => (
+                <ProductCard key={index} producto={producto} />
+              ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Trabajos Section */}
+      <section className="py-16">
+        <Container>
+          <SectionTitle
+            eyebrow="Trabajos reales"
+            title="Casos y proyectos visibles de EcoGift"
+            text="Casos creados a partir del feed público de trabajos y piezas promocionales visibles en el sitio."
+          />
+
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 mb-8">
+            {trabajos.slice(0, 6).map((trabajo, index) => (
+              <TrabajoCard key={index} trabajo={trabajo} />
+            ))}
+          </div>
+
+          <div className="text-center">
+            <a href="/trabajos" className="btn-secondary">
+              Ver todos los trabajos
+            </a>
+          </div>
+        </Container>
+      </section>
+
+      {/* Soluciones Section */}
+      <section className="py-16" id="soluciones">
+        <Container>
+          <SectionTitle
+            eyebrow="Soluciones"
+            title="Pensado para campañas, eventos y kits"
+            text="La navegación prioriza necesidades de negocio antes que el catálogo puro."
+          />
+
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="eco-strategy-card">
+              <div className="text-4xl mb-4">🏪</div>
+              <h3 className="text-xl font-bold text-eco-ink mb-2">
+                Regalos para eventos
+              </h3>
+              <p className="text-eco-muted">
+                Merchandising y regalos promocionales para ferias, lanzamientos y activaciones.
+              </p>
+            </div>
+
+            <div className="eco-strategy-card">
+              <div className="text-4xl mb-4">🎁</div>
+              <h3 className="text-xl font-bold text-eco-ink mb-2">
+                Kits de bienvenida
+              </h3>
+              <p className="text-eco-muted">
+                Sets corporativos para nuevos ingresos, equipos internos y employer branding.
+              </p>
+            </div>
+
+            <div className="eco-strategy-card">
+              <div className="text-4xl mb-4">💼</div>
+              <h3 className="text-xl font-bold text-eco-ink mb-2">
+                Regalos corporativos
+              </h3>
+              <p className="text-eco-muted">
+                Productos funcionales o premium para clientes, equipos y campañas de relacionamiento.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA Section */}
+      <CTASection />
+
+      {/* Sticky CTA */}
+      <StickyCTA />
+    </>
   );
-}
+    }
