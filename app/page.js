@@ -50,12 +50,12 @@ export default function Home() {
             title="Productos Destacados"
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4 mb-8">
-            {productos
-              .filter((p) => p.destacado)
-              .slice(0, 8)
-              .map((producto, index) => (
-                <ProductCard key={index} producto={producto} />
-              ))}
+            {(() => {
+                const featuredSlugs = ['vasos-ecologicos-para-cafe-con-manga-impresa', 'llaveros-con-charms', 'bolsa-totebag-de-algodon', 'mugs-doble-pared', 'libreta-21x14-tipo-moleskine', 'libreta-simple-kraft-21x14', 'aromatizadores-de-auto-personalizados', 'regalo-dia-del-padre', 'lanyard-para-el-celular-c-21694', 'sombrero-pescador', 'cuello-polar-g19', 'g15-manta-impermeable-picnic', 'gorro-lana-g12', 'sombreros-tipo-panama-para-eventos'];
+                return featuredSlugs.map(slug => productos.find(p => p.slug === slug)).filter(Boolean).map((producto, index) => (
+                  <ProductCard key={index} producto={producto} />
+                ));
+              })()}
           </div>
         </Container>
       </section>
@@ -64,8 +64,7 @@ export default function Home() {
       <section className="py-16">
         <Container>
           <SectionTitle
-            eyebrow="Últimos trabajos"
-            title="Casos y proyectos visibles de EcoGift"
+            title="Últimos Trabajos"
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 mb-8">
             {trabajos.slice(0, 6).map((trabajo, index) => (
@@ -90,7 +89,7 @@ export default function Home() {
           />
           <div className="grid gap-6 md:grid-cols-3">
             <div className="eco-strategy-card">
-              <div className="text-4xl mb-4">🎁</div>
+              <div className="text-4xl mb-4">🎆</div>
               <h3 className="text-xl font-bold text-eco-ink mb-2">
                 Regalos para eventos
               </h3>
@@ -99,7 +98,7 @@ export default function Home() {
               </p>
             </div>
             <div className="eco-strategy-card">
-              <div className="text-4xl mb-4">🎁</div>
+              <div className="text-4xl mb-4">👋</div>
               <h3 className="text-xl font-bold text-eco-ink mb-2">
                 Kits de bienvenida
               </h3>
@@ -108,7 +107,7 @@ export default function Home() {
               </p>
             </div>
             <div className="eco-strategy-card">
-              <div className="text-4xl mb-4">📦</div>
+              <div className="text-4xl mb-4">🎁</div>
               <h3 className="text-xl font-bold text-eco-ink mb-2">
                 Regalos corporativos
               </h3>
