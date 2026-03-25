@@ -36,14 +36,13 @@ export default function SolucionesPage() {
         <SectionTitle
           eyebrow="Soluciones"
           title="Diseñado para necesidades reales de negocio"
-          text="La nueva arquitectura prioriza casos de uso antes del catálogo completo."
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {soluciones.map((solucion) => (
             <div key={solucion.slug} className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
               <h2 className="text-2xl font-semibold">{solucion.titulo}</h2>
               <p className="mt-3 text-sm leading-7 text-slate-600">{solucion.descripcion}</p>
-              <a href="/cotizar" className="mt-5 inline-flex text-sm font-medium text-brand-700">Cotizar solución →</a>
+              <a href={`/cotizar?producto=${encodeURIComponent(solucion.titulo)}`} className="mt-5 inline-flex text-sm font-medium text-brand-700">Cotizar solución →</a>
             </div>
           ))}
         </div>

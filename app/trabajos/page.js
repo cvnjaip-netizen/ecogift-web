@@ -14,8 +14,7 @@ export default function TrabajosPage() {
       <Container>
         <SectionTitle
           eyebrow="Portafolio"
-          title="Trabajos visibles y casos de uso"
-          text="Casos creados a partir de textos y referencias visibles en el feed público del sitio."
+          title="Últimos trabajos"
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {trabajos.map((trabajo) => (

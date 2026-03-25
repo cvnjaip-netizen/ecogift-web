@@ -1,40 +1,106 @@
 import Container from "./Container";
-const links = [
-  { href: "/", label: "Inicio" },
-  { href: "/productos", label: "Productos" },
-  { href: "/trabajos", label: "Trabajos" },
-  { href: "/soluciones", label: "Soluciones" },
-  { href: "/clientes", label: "Clientes" },
-  { href: "/cotizar", label: "Cotizar" },
-];
+
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-30 border-b border-slate-200 bg-white">
-      <Container className="flex items-center justify-between py-3">
-        <a href="/" className="flex-shrink-0">
-          <img
-            src="/images/ecogift-logo-navbar.png"
-            alt="EcoGift"
-            style={{ maxHeight: '180px', maxWidth: '100%', objectFit: 'contain' }}
-          />
-        </a>
-        <nav className="hidden md:flex gap-6">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-slate-700 hover:text-green-600 transition-colors"
-            >
-              {link.label}
+    <header className="eco-topbar sticky top-0 z-50">
+      <Container>
+        <div className="flex items-center justify-between py-4">
+          {/* Brand */}
+          <div className="flex-shrink-0">
+            <a href="/">
+              <img
+                src="/images/ecogift-logo-navbar.png"
+                alt="EcoGift"
+                className="h-36 w-auto"
+              />
             </a>
-          ))}
-        </nav>
-        <a
-          href="/cotizar"
-          className="hidden md:inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors"
-        >
-          Cotizar
-        </a>
+          </div>
+
+          {/* Menu Pill - Hidden on mobile */}
+          <nav className="eco-menu-pill hidden md:flex">
+            <a href="/" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
+              Inicio
+            </a>
+            <a href="/productos" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
+              Productos
+            </a>
+            <a href="/trabajos" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
+              Trabajos
+            </a>
+            <a href="/soluciones" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
+              Soluciones
+            </a>
+            <a href="/clientes" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
+              Clientes
+            </a>
+            <a href="/cotizar" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
+              Cotizar
+            </a>
+          </nav>
+
+          {/* CTA Group - Hidden on mobile */}
+          <div className="hidden md:flex items-center gap-3">
+            <a href="/trabajos" className="btn-secondary py-2 px-4 text-sm">
+              Ver trabajos
+            </a>
+            <a href="/cotizar" className="btn-primary py-2 px-4 text-sm">
+              Cotizar
+            </a>
+          </div>
+
+          {/* Mobile Menu - Details/Summary pattern */}
+          <details className="md:hidden">
+            <summary className="cursor-pointer p-2 flex items-center justify-center">
+              <svg
+                className="w-6 h-6 text-eco-ink"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </summary>
+            <nav className="absolute top-full left-0 right-0 bg-white border-b border-slate-200 shadow-lg">
+              <div className="flex flex-col p-4">
+                <a href="/" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
+                  Inicio
+                </a>
+                <a href="/productos" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
+                  Productos
+                </a>
+                <a href="/trabajos" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
+                  Trabajos
+                </a>
+                <a href="/soluciones" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
+                  Soluciones
+                </a>
+                <a href="/clientes" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
+                  Clientes
+                </a>
+                <a href="/cotizar" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
+                  Cotizar
+                </a>
+                <div className="mt-4 pt-4 border-t border-slate-200">
+                  <a href="/cotizar" className="btn-primary py-2 px-4 text-sm block text-center">
+                    Cotizar
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </details>
+
+          {/* Mobile CTA */}
+          <div className="md:hidden">
+            <a href="/cotizar" className="btn-primary py-2 px-4 text-sm">
+              Cotizar
+            </a>
+          </div>
+        </div>
       </Container>
     </header>
   );
