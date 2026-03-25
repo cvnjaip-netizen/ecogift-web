@@ -2,10 +2,10 @@ import Container from "./Container";
 
 export default function Hero() {
   const topCategories = [
-    { emoji: "🧊", label: "Botellas y mugs", value: "Vasos mugs termos y tazas", sub: "Alta rotación" },
+    { emoji: "☕", label: "Botellas y mugs", value: "Vasos mugs termos y tazas", sub: "Alta rotación" },
     { emoji: "🎒", label: "Bolsos y mochilas", value: "Bolsos y mochilas", sub: "Merch útil" },
     { emoji: "🎁", label: "Kits y sets", value: "Sets y kits", sub: "Alta intención" },
-    { emoji: "⚡", label: "Tecnología", value: "USB y tecnología", sub: "Selección premium" },
+    { emoji: "⚡", label: "Tecnología", value: "Audio y tecnología", sub: "Selección premium" },
   ];
 
   return (
