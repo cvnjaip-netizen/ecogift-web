@@ -4,12 +4,12 @@ export default function TrabajoCard({ trabajo }) {
   return (
     <div className="eco-showcase-card flex flex-col h-full">
       {/* Image Area */}
-      <div className="h-48 overflow-hidden bg-slate-100">
+      <div className="h-56 overflow-hidden bg-slate-100 flex items-center justify-center p-4">
         {imagen ? (
           <img
             src={imagen}
             alt={titulo}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         ) : (
           <svg
@@ -57,4 +57,4 @@ export default function TrabajoCard({ trabajo }) {
       </div>
     </div>
   );
-          }
+}
