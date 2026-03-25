@@ -32,11 +32,11 @@ export default function CTASection() {
       <Container>
         <div className="eco-contact-card">
           <div className="relative z-10">
-            <span className="eco-label">Zona de conversión</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-eco-ink mb-3 mt-4">
+            <span className="eco-eyebrow">Zona de conversión</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 mt-4">
               ¿Necesitas una propuesta para tu proyecto?
             </h2>
-            <p className="text-eco-muted mb-8 max-w-2xl">
+            <p className="text-white/70 mb-8 max-w-2xl">
               Cuéntanos qué buscas y prepara una primera base para cotizar productos, kits o campañas corporativas.
             </p>
 
@@ -104,4 +104,4 @@ export default function CTASection() {
       </Container>
     </section>
   );
-            }
+}
