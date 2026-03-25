@@ -51,7 +51,7 @@ export default function Home() {
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4 mb-8">
             {(() => {
-                const featuredSlugs = ['vasos-ecologicos-para-cafe-con-manga-impresa', 'llaveros-con-charms', 'bolsa-totebag-de-algodon', 'mugs-doble-pared', 'libreta-21x14-tipo-moleskine', 'libreta-simple-kraft-21x14', 'aromatizadores-de-auto-personalizados', 'regalo-dia-del-padre', 'lanyard-para-el-celular-c-21694', 'sombrero-pescador', 'cuello-polar-g19', 'g15-manta-impermeable-picnic', 'gorro-lana-g12', 'sombreros-tipo-panama-para-eventos'];
+                const featuredSlugs = ['vasos-ecologicos-para-cafe-con-manga-impresa', 'llaveros-con-charms', 'bolsa-totebag-de-algodón', 'mugs-doble-pared', 'libreta-21x14-tipo-moleskine', 'libreta-simple-kraft-21x14', 'aromatizadores-de-auto-personalizados', 'regalo-día-del-padre', 'lanyard-para-el-celular-c-21694', 'sombrero-pescador', 'cuello-polar-g19', 'g15-manta-impermeable-picnic', 'gorro-lana-g12', 'sombreros-tipo-panamá-para-eventos'];
                 return featuredSlugs.map(slug => productos.find(p => p.slug === slug)).filter(Boolean).map((producto, index) => (
                   <ProductCard key={index} producto={producto} />
                 ));
