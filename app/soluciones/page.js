@@ -36,7 +36,6 @@ export default function SolucionesPage() {
         <SectionTitle
           eyebrow="Soluciones"
           title="Diseñado para necesidades reales de negocio"
-          text="La nueva arquitectura prioriza casos de uso antes del catálogo completo."
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {soluciones.map((solucion) => (
