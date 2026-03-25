@@ -1,5 +1,6 @@
 import Container from '../components/Container';
 import Hero from '../components/Hero';
+import TopBar from '../components/TopBar';
 import SectionTitle from '../components/SectionTitle';
 import CategoryCard from '../components/CategoryCard';
 import ProductCard from '../components/ProductCard';
@@ -15,6 +16,9 @@ import { trabajos } from '../data/trabajos';
 export default function Home() {
   return (
     <>
+      {/* Top Bar */}
+      <TopBar />
+
       {/* Hero Section */}
       <Hero />
 
@@ -31,17 +35,10 @@ export default function Home() {
             text="La estructura se construyó con las categorías públicas visibles del sitio actual."
           />
 
-          {/* Featured Categories Grid */}
-          <div className="grid md:grid-cols-[1.1fr_0.9fr_0.9fr] gap-4 mb-4">
-            {categorias.slice(0, 3).map((cat, index) => (
-              <CategoryCard key={index} nombre={cat} index={index} />
-            ))}
-          </div>
-
-          {/* Showcase Categories Grid */}
+          {/* All Categories Grid - Uniform sizing */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            {categorias.slice(3, 12).map((cat, index) => (
-              <CategoryCard key={index + 3} nombre={cat} index={index + 3} />
+            {categorias.slice(0, 12).map((cat, index) => (
+              <CategoryCard key={index} nombre={cat} index={index} />
             ))}
           </div>
 
