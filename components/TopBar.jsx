@@ -1,6 +1,6 @@
 export default function TopBar() {
   return (
-    <div className="bg-[#D7FF4D] text-slate-900 text-xs py-2 sticky top-0 z-50">
+    <div className="bg-[#9CC33B] text-white text-xs py-2 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center gap-4 flex-wrap">
           <a href="mailto:contacto@ecogiftchile.cl" className="flex items-center gap-1.5 hover:text-green-800 transition-colors">
