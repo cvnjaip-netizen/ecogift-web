@@ -33,9 +33,6 @@ export default function Navbar() {
             <a href="/clientes" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
               Clientes
             </a>
-            <a href="/cotizar" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
-              Cotizar
-            </a>
           </nav>
 
           {/* CTA Group - Hidden on mobile */}
@@ -78,9 +75,6 @@ export default function Navbar() {
                 </a>
                 <a href="/clientes" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
                   Clientes
-                </a>
-                <a href="/cotizar" className="px-4 py-2 text-sm font-medium hover:text-eco-green transition">
-                  Cotizar
                 </a>
                 <div className="mt-4 pt-4 border-t border-slate-200">
                   <a href="/cotizar" className="bg-[#D7FF4D] text-slate-900 font-semibold rounded-full py-2 px-4 text-sm hover:bg-[#c8f044] transition-colors block text-center">
