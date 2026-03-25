@@ -27,8 +27,8 @@ export default function Home() {
       <section className="py-16">
         <Container>
           <SectionTitle
-            title="Explora el cat\u00e1logo por categor\u00eda"
-            text="La estructura se construy\u00f3 con las categor\u00edas p\u00fablicas visibles del sitio actual."
+            title="Explora el catálogo por categoría"
+            text="La estructura se construyó con las categorías públicas visibles del sitio actual."
           />
 
           {/* Featured Categories Grid */}
@@ -47,7 +47,7 @@ export default function Home() {
 
           <div className="text-center">
             <a href="/productos" className="btn-secondary">
-              Ver todo el cat\u00e1logo
+              Ver todo el catálogo
             </a>
           </div>
         </Container>
@@ -58,7 +58,7 @@ export default function Home() {
         <Container>
           <SectionTitle
             title="Productos Destacados"
-            text="Cat\u00e1logo inicial cargado con productos visibles y representativos del sitio p\u00fablico."
+            text="Catálogo inicial cargado con productos visibles y representativos del sitio público."
           />
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {productos
@@ -77,7 +77,7 @@ export default function Home() {
           <SectionTitle
             eyebrow="Trabajos reales"
             title="Casos y proyectos visibles de EcoGift"
-            text="Casos creados a partir del feed p\u00fablico de trabajos y piezas promocionales visibles en el sitio."
+            text="Casos creados a partir del feed público de trabajos y piezas promocionales visibles en el sitio."
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 mb-8">
             {trabajos.slice(0, 6).map((trabajo, index) => (
@@ -97,12 +97,12 @@ export default function Home() {
         <Container>
           <SectionTitle
             eyebrow="Soluciones"
-            title="Pensado para campa\u00f1as, eventos y kits"
-            text="La navegaci\u00f3n prioriza necesidades de negocio antes que el cat\u00e1logo puro."
+            title="Pensado para campañas, eventos y kits"
+            text="La navegación prioriza necesidades de negocio antes que el catálogo puro."
           />
           <div className="grid gap-6 md:grid-cols-3">
             <div className="eco-strategy-card">
-              <div className="text-4xl mb-4">\uD83C\uDFEA</div>
+              <div className="text-4xl mb-4">🏪</div>
               <h3 className="text-xl font-bold text-eco-ink mb-2">
                 Regalos para eventos
               </h3>
@@ -111,7 +111,7 @@ export default function Home() {
               </p>
             </div>
             <div className="eco-strategy-card">
-              <div className="text-4xl mb-4">\uD83C\uDF81</div>
+              <div className="text-4xl mb-4">🎁</div>
               <h3 className="text-xl font-bold text-eco-ink mb-2">
                 Kits de bienvenida
               </h3>
@@ -120,12 +120,12 @@ export default function Home() {
               </p>
             </div>
             <div className="eco-strategy-card">
-              <div className="text-4xl mb-4">\uD83D\uDCBC</div>
+              <div className="text-4xl mb-4">💼</div>
               <h3 className="text-xl font-bold text-eco-ink mb-2">
                 Regalos corporativos
               </h3>
               <p className="text-eco-muted">
-                Productos funcionales o premium para clientes, equipos y campa\u00f1as de relacionamiento.
+                Productos funcionales o premium para clientes, equipos y campañas de relacionamiento.
               </p>
             </div>
           </div>
