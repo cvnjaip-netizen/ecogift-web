@@ -4,21 +4,25 @@ import SectionTitle from "../../components/SectionTitle";
 const soluciones = [
   {
     slug: "eventos",
+    emoji: "🎆",
     titulo: "Regalos para eventos",
     descripcion: "Productos promocionales para activaciones, ferias, lanzamientos y experiencias de marca."
   },
   {
     slug: "onboarding",
+    emoji: "👋",
     titulo: "Kits de bienvenida",
     descripcion: "Sets para nuevos ingresos, equipos internos y employer branding."
   },
   {
     slug: "corporativos",
+    emoji: "🎁",
     titulo: "Regalos corporativos",
     descripcion: "Productos funcionales o premium para clientes, equipos y campañas de relacionamiento."
   },
   {
     slug: "tecnologia",
+    emoji: "🔌",
     titulo: "Merchandising tecnológico",
     descripcion: "Powerbanks, mouse pads, accesorios y objetos con alto valor percibido."
   }
@@ -40,6 +44,7 @@ export default function SolucionesPage() {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {soluciones.map((solucion) => (
             <div key={solucion.slug} className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+              <div className="text-4xl mb-3">{solucion.emoji}</div>
               <h2 className="text-2xl font-semibold">{solucion.titulo}</h2>
               <p className="mt-3 text-sm leading-7 text-slate-600">{solucion.descripcion}</p>
               <a href={`/cotizar?producto=${encodeURIComponent(solucion.titulo)}`} className="mt-5 inline-flex text-sm font-medium text-brand-700">Cotizar solución →</a>
