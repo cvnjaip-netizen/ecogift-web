@@ -40,9 +40,6 @@ export default function Navbar() {
 
           {/* CTA Group - Hidden on mobile */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="/trabajos" className="btn-secondary py-2 px-4 text-sm">
-              Ver trabajos
-            </a>
             <a href="/cotizar" className="btn-primary py-2 px-4 text-sm">
               Cotizar
             </a>
