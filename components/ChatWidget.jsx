@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function ChatWidget() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const phone = "56997582936";
   const message = "Hola, me gustaría cotizar productos promocionales.";
   const waUrl = 'https://wa.me/' + phone + '?text=' + encodeURIComponent("Hola, me gustaría cotizar productos promocionales.");
