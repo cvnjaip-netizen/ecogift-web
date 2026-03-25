@@ -2,10 +2,10 @@ import Container from "./Container";
 
 export default function Hero() {
   const topCategories = [
-    { emoji: "🧊", label: "Botellas y mugs", sub: "Alta rotación" },
-    { emoji: "🎒", label: "Bolsos y mochilas", sub: "Merch útil" },
-    { emoji: "🎁", label: "Kits de bienvenida", sub: "Alta intención" },
-    { emoji: "⚡", label: "Tecnología y escritorio", sub: "Selección premium" },
+    { emoji: "🧊", label: "Botellas y mugs", value: "Vasos mugs termos y tazas", sub: "Alta rotación" },
+    { emoji: "🎒", label: "Bolsos y mochilas", value: "Bolsos y mochilas", sub: "Merch útil" },
+    { emoji: "🎁", label: "Kits y sets", value: "Sets y kits", sub: "Alta intención" },
+    { emoji: "⚡", label: "Tecnología", value: "USB y tecnología", sub: "Selección premium" },
   ];
 
   return (
@@ -74,7 +74,7 @@ export default function Hero() {
                   {topCategories.map((cat, i) => (
                     <a
                       key={i}
-                      href={`/productos?categoria=${encodeURIComponent(cat.label)}`}
+                      href={`/productos?categoria=${encodeURIComponent(cat.value)}`}
                       className="rounded-2xl border border-slate-100 bg-white p-2.5 hover:-translate-y-0.5 hover:shadow-lg transition-all"
                     >
                       <div className="text-xl mb-1">{cat.emoji}</div>
