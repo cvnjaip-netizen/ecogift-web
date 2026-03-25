@@ -40,7 +40,7 @@ export default function Navbar() {
 
           {/* CTA Group - Hidden on mobile */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="/cotizar" className="btn-primary py-2 px-4 text-sm">
+            <a href="/cotizar" className="bg-[#D7FF4D] text-slate-900 font-semibold rounded-full py-2 px-4 text-sm hover:bg-[#c8f044] transition-colors">
               Cotizar
             </a>
           </div>
@@ -83,7 +83,7 @@ export default function Navbar() {
                   Cotizar
                 </a>
                 <div className="mt-4 pt-4 border-t border-slate-200">
-                  <a href="/cotizar" className="btn-primary py-2 px-4 text-sm block text-center">
+                  <a href="/cotizar" className="bg-[#D7FF4D] text-slate-900 font-semibold rounded-full py-2 px-4 text-sm hover:bg-[#c8f044] transition-colors block text-center">
                     Cotizar
                   </a>
                 </div>
@@ -93,7 +93,7 @@ export default function Navbar() {
 
           {/* Mobile CTA */}
           <div className="md:hidden">
-            <a href="/cotizar" className="btn-primary py-2 px-4 text-sm">
+            <a href="/cotizar" className="bg-[#D7FF4D] text-slate-900 font-semibold rounded-full py-2 px-4 text-sm hover:bg-[#c8f044] transition-colors">
               Cotizar
             </a>
           </div>
