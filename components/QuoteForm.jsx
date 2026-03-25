@@ -18,7 +18,7 @@ export default function QuoteForm() {
       </div>
       <input className="input" defaultValue={producto} placeholder="Producto de interés" />
       <textarea className="input min-h-40" placeholder="Cuéntanos con más detalle lo que buscas, cantidades estimadas, fecha objetivo y tipo de personalización." />
-      <button type="button" className="btn-primary">Enviar cotización</button>
+      <button type="button" className="btn-primary text-white">Enviar cotización</button>
       <p className="text-xs text-slate-500">Formulario de interfaz listo para conectar con email, CRM o backend.</p>
     </form>
   );
