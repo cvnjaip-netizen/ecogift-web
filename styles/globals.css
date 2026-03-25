@@ -30,8 +30,8 @@ a {
 /* ── Buttons ── */
 .btn-primary {
   @apply inline-flex items-center justify-center rounded-full bg-eco-green
-    px-6 py-3 font-bold text-white
-    shadow-[0_18px_30px_rgba(24,79,54,0.24)]
+    px-6 py-3 font-bold text-eco-ink
+    shadow-[0_18px_30px_rgba(156,195,59,0.24)]
     hover:-translate-y-0.5 hover:bg-eco-green3 transition-all;
 }
 
@@ -68,11 +68,11 @@ a {
 
 /* ── Hero card ── */
 .hero-card {
-  @apply relative rounded-5xl overflow-hidden text-white shadow-eco-lg;
+  @apply relative rounded-5xl overflow-hidden text-eco-ink shadow-eco-lg;
   background: linear-gradient(135deg,
-    rgba(16,53,36,0.98) 0%,
-    rgba(25,79,54,0.96) 55%,
-    rgba(35,104,74,0.94) 100%);
+    rgba(156,195,59,0.98) 0%,
+    rgba(125,162,46,0.96) 55%,
+    rgba(140,181,53,0.94) 100%);
   border: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -114,8 +114,8 @@ a {
 }
 
 .eco-feature-card.heroish {
-  @apply text-white;
-  background: linear-gradient(135deg, #173f2e 0%, #296e4d 100%);
+  @apply text-eco-ink;
+  background: linear-gradient(135deg, #7DA22E 0%, #9CC33B 100%);
   border-color: rgba(255,255,255,0.08);
 }
 
@@ -157,7 +157,7 @@ a {
 .eco-contact-card {
   @apply relative rounded-4xl text-white overflow-hidden shadow-eco-lg
     p-8 md:p-12 lg:p-16;
-  background: linear-gradient(135deg, #173f2e 0%, #225f44 100%);
+  background: linear-gradient(135deg, #7DA22E 0%, #9CC33B 100%);
 }
 
 .eco-contact-card::after {
