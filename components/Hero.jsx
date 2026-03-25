@@ -2,7 +2,7 @@ import Container from "./Container";
 
 export default function Hero() {
   const topCategories = [
-    { emoji: "🥤", label: "Botellas y mugs", sub: "Alta rotación" },
+    { emoji: "🧊", label: "Botellas y mugs", sub: "Alta rotación" },
     { emoji: "🎒", label: "Bolsos y mochilas", sub: "Merch útil" },
     { emoji: "🎁", label: "Kits de bienvenida", sub: "Alta intención" },
     { emoji: "⚡", label: "Tecnología y escritorio", sub: "Selección premium" },
@@ -58,17 +58,17 @@ export default function Hero() {
             {/* Right column */}
             <div className="hidden lg:flex flex-col">
               <div className="eco-quick-panel">
-                <h2 className="text-base font-bold text-eco-ink mb-2">Compra por campaña</h2>
+                <h2 className="text-base font-bold text-eco-ink mb-2">Compra por Categoría</h2>
 
-                <div className="relative mb-4">
+                <form action="/productos" method="GET" className="relative mb-4">
                   <input
                     type="text"
+                    name="busqueda"
                     placeholder="Buscar mugs, kits, mochilas..."
                     className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2 pl-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-lime-400"
-                    readOnly
                   />
-                  <span className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
-                </div>
+                  <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</button>
+                </form>
 
                 <div className="grid grid-cols-2 gap-2">
                   {topCategories.map((cat, i) => (
