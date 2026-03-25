@@ -32,10 +32,10 @@ export default function CTASection() {
       <Container>
         <div className="eco-contact-card">
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-eco-ink mb-3">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
               ¿Necesitas una propuesta para tu proyecto?
             </h2>
-            <p className="text-eco-ink/70 mb-8 max-w-2xl">
+            <p className="text-white/80 mb-8 max-w-2xl">
               Cuéntanos qué buscas y prepara una primera base para cotizar productos, kits o campañas corporativas.
             </p>
 
