@@ -1,6 +1,6 @@
 const emojiMap = {
   "Accesorios de escritorio": "🖊️",
-  "Artículos promocionales": "📦",
+  "Artículos promocionales": "📣",
   "Audio y tecnología": "🎧",
   "Bolsas ecológicas": "🛍️",
   "Bolsos y mochilas": "🎒",
