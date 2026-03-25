@@ -9,7 +9,7 @@ export default function ProductCard({ producto }) {
           <img
             src={imagen}
             alt={nombre}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         ) : (
           <svg
