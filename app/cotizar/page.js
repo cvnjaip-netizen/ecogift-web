@@ -18,9 +18,8 @@ export default function CotizarPage() {
             title="Cuéntanos con más detalle lo que buscas"
           />
           <div className="mt-8 rounded-3xl border border-slate-200 bg-arena p-8">
-            <p className="font-semibold">Contacto visible del sitio</p>
-            <p className="mt-3 text-sm text-slate-700">ventas@ecogiftchile.cl</p>
-            <p className="text-sm text-slate-700">+56 9 9758 2936</p>
+                        <p className="mt-3 text-lg font-semibold text-slate-700">ventas@ecogiftchile.cl</p>
+            <p className="text-lg font-semibold text-slate-700">+56 9 9758 2936</p>
           </div>
         </div>
         <Suspense>
