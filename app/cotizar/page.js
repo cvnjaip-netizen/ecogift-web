@@ -16,7 +16,6 @@ export default function CotizarPage() {
           <SectionTitle
             eyebrow="Contacto / Cotizar"
             title="Cuéntanos con más detalle lo que buscas"
-            text="Esta página deja listo el flujo para conectar con email, CRM o automatización."
           />
           <div className="mt-8 rounded-3xl border border-slate-200 bg-arena p-8">
             <p className="font-semibold">Contacto visible del sitio</p>
