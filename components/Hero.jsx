@@ -16,8 +16,6 @@ export default function Hero() {
 
             {/* Left column */}
             <div>
-              <span className="eco-eyebrow text-[11px]">Merchandising corporativo en Chile</span>
-
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mt-3 mb-3 leading-tight">
                 Regalos corporativos, productos promocionales y kits con foco en marca.
               </h1>
