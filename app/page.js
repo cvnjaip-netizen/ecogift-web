@@ -7,7 +7,6 @@ import ProductCard from '../components/ProductCard';
 import TrabajoCard from '../components/TrabajoCard';
 import ClienteGrid from '../components/ClienteGrid';
 import CTASection from '../components/CTASection';
-import StickyCTA from '../components/StickyCTA';
 import ChatWidget from '../components/ChatWidget';
 import { categorias } from '../data/categorias';
 import { productos } from '../data/productos';
@@ -131,9 +130,6 @@ export default function Home() {
 
       {/* CTA Section */}
       <CTASection />
-
-      {/* Sticky CTA */}
-      <StickyCTA />
 
       {/* Chat Widget */}
       <ChatWidget />
