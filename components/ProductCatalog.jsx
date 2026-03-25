@@ -29,6 +29,13 @@ const categoryEmojis = {
   "Vasos mugs termos y tazas": "☕"
 };
 
+const featuredSlugs = [
+  'vasos-ecologicos-para-cafe-con-manga-impresa', 'llaveros-con-charms', 'bolsa-totebag-de-algodón', 'mugs-doble-pared',
+  'libreta-21x14-tipo-moleskine', 'libreta-simple-kraft-21x14', 'aromatizadores-de-auto-personalizados', 'regalo-día-del-padre',
+  'lanyard-para-el-celular-c-21694', 'sombrero-pescador', 'cuello-polar-g19', 'g15-manta-impermeable-picnic',
+  'gorro-lana-g12', 'sombreros-tipo-panamá-para-eventos', 'jockey-desgastado-j-pre', 'cooler-6-litros-c6l'
+];
+
 export default function ProductCatalog({ productos, categorias, initialCategoria = "Todos", initialBusqueda = "" }) {
   const [busqueda, setBusqueda] = useState(initialBusqueda);
   const [categoria, setCategoria] = useState(initialCategoria);
@@ -37,7 +44,17 @@ export default function ProductCatalog({ productos, categorias, initialCategoria
 
   const filtrados = useMemo(() => {
     const byCategory = filterByCategory(productos, categoria);
-    return searchItems(byCategory, busqueda, ["nombre", "categoria", "descripcion"]);
+    const results = searchItems(byCategory, busqueda, ["nombre", "categoria", "descripcion"]);
+    return results.sort((a, b) => {
+      const aIdx = featuredSlugs.indexOf(a.slug);
+      const bIdx = featuredSlugs.indexOf(b.slug);
+      const aFeatured = aIdx !== -1;
+      const bFeatured = bIdx !== -1;
+      if (aFeatured && !bFeatured) return -1;
+      if (!aFeatured && bFeatured) return 1;
+      if (aFeatured && bFeatured) return aIdx - bIdx;
+      return 0;
+    });
   }, [productos, categoria, busqueda]);
 
   const productCount = (cat) => productos.filter(p => p.categoria === cat).length;
