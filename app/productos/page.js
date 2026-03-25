@@ -12,16 +12,23 @@ export const metadata = {
 
 export default function ProductosPage({ searchParams }) {
   const initialCategoria = searchParams?.categoria || "Todos";
+  const initialBusqueda = searchParams?.busqueda || "";
+
   return (
     <main className="py-16">
       <Container>
         <SectionTitle
           eyebrow="Catálogo"
           title="Productos promocionales y regalos corporativos"
-          text="Catálogo completo con búsqueda y filtrado por categoría."
         />
         <div className="mt-10">
-          <ProductCatalog key={initialCategoria} productos={productos} categorias={categorias} initialCategoria={initialCategoria} />
+          <ProductCatalog
+            key={initialCategoria + initialBusqueda}
+            productos={productos}
+            categorias={categorias}
+            initialCategoria={initialCategoria}
+            initialBusqueda={initialBusqueda}
+          />
         </div>
         <div className="mt-16">
           <FAQ />
