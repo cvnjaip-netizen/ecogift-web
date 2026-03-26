@@ -1,1 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  @apply text-slate-900;
+  background:
+    radial-gradient(circle at 8% 10%, rgba(215,255,77,0.18), transparent 22%),
+    radial-gradient(circle at 92% 22%, rgba(255,140,66,0.06), transparent 20%),
+    linear-gradient(180deg, #fafbf7 0%, #f4f6ef 42%, #eef3ea 100%);
+  min-height: 100vh;
+}
+
+a {
+  @apply transition-colors;
+}
+
+/* ── Form input ── */
+.input {
+  @apply w-full rounded-xl border border-slate-300 px-4 py-3 outline-none
+    focus:border-brand-700 focus:ring-2 focus:ring-brand-100;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-eco-green
+    px-6 py-3 font-bold text-white
+    shadow-[0_18px_30px_rgba(156,195,59,0.24)]
+    hover:-translate-y-0.5 hover:bg-eco-green3 transition-all;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border
+    border-slate-200 bg-white px-6 py-3 font-bold text-eco-ink
+    hover:-translate-y-0.5 hover:shadow-eco-sm transition-all;
+}
+
+.btn-lime {
+  @apply inline-flex items-center justify-center rounded-full bg-eco-lime
+    px-6 py-3 font-extrabold text-[#14200f] shadow-lime
+    hover:-translate-y-0.5 transition-all;
+}
+
+/* ── Tags ── */
+.tag {
+  @apply inline-flex rounded-full bg-brand-50 px-3 py-1 text-xs font-medium
+    text-brand-800;
+}
+
+/* ── Eyebrow label ── */
+.eco-eyebrow {
+  @apply inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-extrabold;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.90);
+}
+
+/* ── Section label ── */
+.eco-label {
+  @apply text-xs font-black uppercase tracking-[0.08em] text-eco-green mb-2;
+}
+
+/* ── Hero card ── */
+.hero-card {
+  @apply relative rounded-5xl overflow-hidden text-eco-ink shadow-eco-lg;
+  background: linear-gradient(135deg,
+    rgba(156,195,59,0.98) 0%,
+    rgba(125,162,46,0.96) 55%,
+    rgba(140,181,53,0.94) 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero-card::before {
+  content: "";
+  @apply absolute inset-0 pointer-events-none;
+  background:
+    radial-gradient(circle at 20% 22%, rgba(215,255,77,0.20), transparent 22%),
+    radial-gradient(circle at 82% 18%, rgba(255,255,255,0.10), transparent 20%);
+}
+
+/* ── Stat pill inside hero ── */
+.eco-stat {
+  @apply p-4 rounded-[20px];
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* ── Premium band ── */
+.eco-band {
+  @apply rounded-4xl border border-slate-100 shadow-eco p-6 md:p-8;
+  background: linear-gradient(135deg, #ffffff, #f8fbf5);
+}
+
+/* ── Logo pill ── */
+.eco-logo-pill {
+  @apply flex items-center justify-center p-3 min-h-[60px] rounded-2xl
+    border border-slate-100 hover:-translate-y-0.5 transition-transform;
+  background: #f4f7ef;
+}
+
+/* ── Feature card (category hero) ── */
+.eco-feature-card {
+  @apply relative rounded-4xl p-6 min-h-[230px] flex flex-col justify-between
+    overflow-hidden shadow-eco border border-slate-100
+    hover:-translate-y-1 hover:shadow-eco-lg transition-all;
+  background: linear-gradient(180deg, #fff 0%, #f8fbf5 100%);
+}
+
+.eco-feature-card.heroish {
+  @apply text-eco-ink;
+  background: linear-gradient(135deg, #7DA22E 0%, #9CC33B 100%);
+  border-color: rgba(255,255,255,0.08);
+}
+
+.eco-feature-card.heroish::after {
+  content: "";
+  @apply absolute w-44 h-44 rounded-full pointer-events-none;
+  background: rgba(215,255,77,0.20);
+  right: -30px;
+  bottom: -30px;
+}
+
+/* ── Showcase card ── */
+.eco-showcase-card {
+  @apply overflow-hidden rounded-4xl border border-slate-100 shadow-eco
+    hover:-translate-y-1 hover:shadow-eco-lg transition-all;
+  background: linear-gradient(180deg, #fff 0%, #f9fbf6 100%);
+}
+
+/* ── Showcase visual area ── */
+.eco-visual-green {
+  background:
+    linear-gradient(135deg, rgba(215,255,77,0.32), rgba(255,255,255,0.2)),
+    linear-gradient(180deg, #214d38, #2f7652);
+}
+
+.eco-visual-sand {
+  background:
+    linear-gradient(135deg, rgba(255,140,66,0.20), rgba(255,255,255,0.1)),
+    linear-gradient(180deg, #f3e6d3, #eadbc0);
+}
+
+/* ── Strategy card ── */
+.eco-strategy-card {
+  @apply p-6 rounded-4xl border border-slate-100 shadow-eco;
+  background: rgba(255,255,255,0.90);
+}
+
+/* ── Contact card ── */
+.eco-contact-card {
+  @apply relative rounded-4xl text-white overflow-hidden shadow-eco-lg
+    p-8 md:p-12 lg:p-16;
+  background: linear-gradient(135deg, #7DA22E 0%, #9CC33B 100%);
+}
+
+.eco-contact-card::after {
+  content: "";
+  @apply absolute w-56 h-56 rounded-full pointer-events-none;
+  background: rgba(215,255,77,0.18);
+  right: -40px;
+  top: -30px;
+}
+
+/* ── Dark-bg form fields ── */
+.eco-field {
+  @apply w-full rounded-2xl px-4 py-3.5 text-sm text-white outline-none
+    transition-colors;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.10);
+}
+
+.eco-field::placeholder {
+  color: rgba(255,255,255,0.60);
+}
+
+.eco-field:focus {
+  border-color: #d7ff4d;
+}
+
+/* ── Sticky CTA ── */
+.eco-sticky-cta {
+  @apply fixed right-5 bottom-5 z-40 inline-flex items-center gap-2
+    rounded-full px-5 py-3.5 font-black text-sm no-underline
+    bg-eco-lime text-[#13200d] shadow-lime
+    hover:-translate-y-0.5 hover:scale-[1.02] transition-all;
+}
+
+/* ── Topbar ── */
+.eco-topbar {
+  @apply sticky top-0 z-40 border-b border-slate-100;
+  backdrop-filter: blur(16px);
+  background: rgba(250,251,247,0.82);
+}
+
+.eco-menu-pill {
+  @apply hidden md:flex gap-6 px-5 py-2.5 rounded-full border border-slate-100;
+  background: rgba(255,255,255,0.82);
+  box-shadow: 0 4px 16px rgba(16,32,24,0.12), 0 1.5px 4px rgba(16,32,24,0.08);
+}
+
+.eco-menu-pill a {
+  @apply text-sm font-bold text-slate-600 hover:text-eco-green transition-colors;
+}
+
+/* ── Quick panel (right hero) ── */
+.eco-quick-panel {
+  @apply p-5 rounded-4xl border border-slate-100 shadow-eco;
+  background: linear-gradient(135deg, #eaf6d9, #fbfff3);
+  color: #102018;
+}
+
+/* ── Bullet ── */
+.eco-bullet-icon {
+  @apply inline-flex items-center justify-center w-6 h-6 rounded-full
+    bg-brand-50 text-eco-green text-xs font-black flex-shrink-0;
+  }
