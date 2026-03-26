@@ -4,7 +4,7 @@ const logoSize = {
   "L'Oréal": '28px',
   'Netflix': '28px',
   'Google': '28px',
-  'Garnier': '28px',
+  'Garnier': '45px',
   'BBVA': '28px',
   'Cruz Verde': '28px',
   'Santander': '28px',
