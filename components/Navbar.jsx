@@ -2,7 +2,7 @@ import Container from "./Container";
 
 export default function Navbar() {
   return (
-    <header className="eco-topbar sticky top-8 z-30">
+    <header className="eco-topbar sticky top-9 z-40">
       <Container>
         <div className="flex items-center justify-between py-4">
           {/* Brand */}
@@ -32,7 +32,7 @@ export default function Navbar() {
             </a>
             <a
               href="/cotizar"
-              className="ml-2 bg-[#D7FF4D] text-slate-900 font-semibold rounded-full py-2 px-4 text-sm hover:bg-[#c8f044] transition-colors"
+              className="bg-[#D7FF4D] text-slate-900 font-semibold rounded-full py-2 px-4 text-sm hover:bg-[#c8f044] transition-colors"
             >
               Cotizar
             </a>
