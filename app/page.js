@@ -87,8 +87,8 @@ export default function Home() {
             eyebrow="Soluciones"
             title="Pensado para campañas, eventos y kits"
           />
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="eco-strategy-card">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <a href="/cotizar?producto=Regalos para eventos" className="eco-strategy-card block no-underline text-inherit">
               <div className="text-4xl mb-4">🎆</div>
               <h3 className="text-xl font-bold text-eco-ink mb-2">
                 Regalos para eventos
@@ -96,8 +96,8 @@ export default function Home() {
               <p className="text-eco-muted">
                 Merchandising y regalos promocionales para ferias, lanzamientos y activaciones.
               </p>
-            </div>
-            <div className="eco-strategy-card">
+            </a>
+            <a href="/cotizar?producto=Kits de bienvenida" className="eco-strategy-card block no-underline text-inherit">
               <div className="text-4xl mb-4">👋</div>
               <h3 className="text-xl font-bold text-eco-ink mb-2">
                 Kits de bienvenida
@@ -105,8 +105,8 @@ export default function Home() {
               <p className="text-eco-muted">
                 Sets corporativos para nuevos ingresos, equipos internos y employer branding.
               </p>
-            </div>
-            <div className="eco-strategy-card">
+            </a>
+            <a href="/cotizar?producto=Regalos corporativos" className="eco-strategy-card block no-underline text-inherit">
               <div className="text-4xl mb-4">🎁</div>
               <h3 className="text-xl font-bold text-eco-ink mb-2">
                 Regalos corporativos
@@ -114,7 +114,16 @@ export default function Home() {
               <p className="text-eco-muted">
                 Productos funcionales o premium para clientes, equipos y campañas de relacionamiento.
               </p>
-            </div>
+            </a>
+            <a href="/cotizar?producto=Merchandising tecnológico" className="eco-strategy-card block no-underline text-inherit">
+              <div className="text-4xl mb-4">💻</div>
+              <h3 className="text-xl font-bold text-eco-ink mb-2">
+                Merchandising tecnológico
+              </h3>
+              <p className="text-eco-muted">
+                Gadgets, accesorios tech y productos electrónicos personalizados para tu marca.
+              </p>
+            </a>
           </div>
         </Container>
       </section>
