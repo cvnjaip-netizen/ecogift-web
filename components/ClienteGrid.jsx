@@ -1,5 +1,17 @@
 import { clientes } from '../data/clientes';
 
+const logoSize = {
+  "L'Oréal": '28px',
+  'Netflix': '28px',
+  'Google': '28px',
+  'Garnier': '28px',
+  'BBVA': '28px',
+  'Cruz Verde': '28px',
+  'Santander': '28px',
+  'Nespresso': '55px',
+  'Corona': '55px',
+};
+
 export default function ClienteGrid() {
   return (
     <div className="eco-band">
@@ -23,7 +35,7 @@ export default function ClienteGrid() {
                 src={`/images/clientes/${cliente.logoPath}`}
                 alt={cliente.nombre}
                 style={{
-                  maxHeight: '40px',
+                  maxHeight: logoSize[cliente.nombre] || '40px',
                   maxWidth: '100%',
                   objectFit: 'contain'
                 }}
